@@ -2,8 +2,7 @@
 nav{
     width: 100%;
     position: fixed;
-    top:50px;
-    text-align: center;
+    top:20px;
 }
 
 nav a{
@@ -11,10 +10,30 @@ nav a{
     font: weight 400px;
     text-transform:uppercase;
     text-decoration:none;
+    text-align: center;
     color:#16151ba1;
-    margin:0 15px;
     font-size:16px;
     letter-spacing:1px;
     position:relative;
     display:inline;
 }
+
+nav svg {
+    position: relative;
+    top: 2px;
+}
+
+#brand-logo {
+    float: left;
+    padding-left: 30px;
+}
+
+#nav-email {
+    padding-left: 20%;
+}
+
+.nav-right {
+    float: right;
+    padding-right: 30px;
+}
+
