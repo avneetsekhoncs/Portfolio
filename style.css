@@ -59,6 +59,7 @@ nav svg {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    padding-left: 10rem;
 }
 .avatar-bio h1 {
     font-family: 'Poppins', sans-serif;
@@ -73,6 +74,7 @@ nav svg {
     font-family: 'Poppins', sans-serif;
     font-weight: 200;
     text-transform: uppercase;
+    padding-bottom: 1rem;
 }
 #skewed-name {
     padding-left: 110px;
@@ -80,6 +82,7 @@ nav svg {
 .avatar-bio p {
     font-family: 'Poppins', sans-serif;
     width: 65%;
+    padding-bottom: 3rem;
 }
 .avatar-bio img {
     width: 40%; 
@@ -87,67 +90,53 @@ nav svg {
     object-fit: none;
     margin: 0;
     padding-left: 100px;
+    padding-bottom: 2rem;
 }
 
-/* Button by Duolingo */
+/* Button by Algolia */
 .avatar-bio button {
-  appearance: button;
-  background-color: #1899D6;
-  border: solid transparent;
-  border-radius: 16px;
-  border-width: 0 0 4px;
-  box-sizing: border-box;
-  color: #FFFFFF;
-  cursor: pointer;
-  display: inline-block;
-  font-family: 'Poppins', sans-serif;
-  font-size: 15px;
-  font-weight: 600;
-  letter-spacing: .8px;
-  line-height: 20px;
-  margin: 0;
-  outline: none;
-  overflow: visible;
-  padding: 13px 16px;
-  text-align: center;
-  text-transform: uppercase;
-  touch-action: manipulation;
-  transform: translateZ(0);
-  transition: filter .2s;
-  user-select: none;
-  -webkit-user-select: none;
-  vertical-align: middle;
-  white-space: nowrap;
-  width: 20%;
+    align-items: center;
+    appearance: none;
+    background-color: #f8bf05;
+    border-radius: 4px;
+    border-width: 0;
+    box-shadow: rgba(45, 35, 66, 0.4) 0 2px 4px,rgba(45, 35, 66, 0.3) 0 7px 13px -3px,#f8bf05 0 -3px 0 inset;
+    box-sizing: border-box;
+    color: #36395A;
+    cursor: pointer;
+    display: inline-flex;
+    font-family: "JetBrains Mono",monospace;
+    height: 48px;
+    justify-content: center;
+    line-height: 1;
+    list-style: none;
+    overflow: hidden;
+    padding-left: 16px;
+    padding-right: 16px;
+    position: relative;
+    text-align: left;
+    text-decoration: none;
+    transition: box-shadow .15s,transform .15s;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    white-space: nowrap;
+    will-change: box-shadow,transform;
+    font-size: 18px;
 }
 
-.avatar-bio button:after {
-  background-clip: padding-box;
-  background-color: #1CB0F6;
-  border: solid transparent;
-  border-radius: 16px;
-  border-width: 0 0 4px;
-  bottom: -4px;
-  content: "";
-  left: 0;
-  position: absolute;
-  right: 0;
-  top: 0;
-  z-index: -1;
-}
-
-.avatar-bio button:main,
 .avatar-bio button:focus {
-  user-select: auto;
+    box-shadow: #D6D6E7 0 0 0 1.5px inset, rgba(45, 35, 66, 0.4) 0 2px 4px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #D6D6E7 0 -3px 0 inset;
 }
 
-.avatar-bio button:hover:not(:disabled) {
-  filter: brightness(1.1);
-  -webkit-filter: brightness(1.1);
+.avatar-bio button:hover {
+    box-shadow: rgba(45, 35, 66, 0.4) 0 4px 8px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #000000 0 -3px 0 inset;
+    transform: translateY(-2px);
 }
 
-.avatar-bio button:disabled {
-  cursor: auto;
+.avatar-bio button:active {
+    box-shadow: #D6D6E7 0 3px 7px inset;
+    transform: translateY(2px);
 }
 
 /* Avatar styling */
@@ -155,4 +144,11 @@ nav svg {
     display: flex;
     justify-content: center;
     align-items: center;
+    padding-right: 10rem;
+}
+
+.avatar img {
+    border: 5px solid rgba(0, 0, 0, 0.699);
+    border-radius: 50%;
+    box-shadow: 10px 10px 5px rgb(60, 61, 61);
 }
