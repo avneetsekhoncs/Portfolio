@@ -1,13 +1,18 @@
-/* NavBar Styling  */
-nav{
-    width: 100%;
-    position: fixed;
-    top:20px;
+/* Main content stlying */
+.grid-container {
+    height: 97vh;
+    display: grid;
+    grid-template-columns: 0fr 2fr 2fr;
+    grid-template-rows: 0fr 1fr;
 }
 
-nav a{
-    font-family: 'Roboto Mono', monospace;
-    text-transform:uppercase;
+/* Navbar Styling  */
+.nav-container {
+    grid-column: span 3;
+}
+nav a {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
     text-decoration:none;
     text-align: center;
     color:#16151ba1;
@@ -16,24 +21,138 @@ nav a{
     position:relative;
     display:inline;
 }
-
 nav svg {
     position: relative;
     top: 2px;
 }
-
 #brand-logo {
     float: left;
     padding-left: 30px;
 }
-
 #nav-email {
     padding-left: 20%;
 }
-
 .nav-right {
     float: right;
     padding-right: 30px;
 }
 
+/* sidebar styling */
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.sidebar a {
+    padding: 10px;
+    color:#16151ba1;
+}
+.sidebar svg {
+    width: 20px;
+    height: auto;
+}
 
+/* Bio styling */
+.avatar-bio {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.avatar-bio h1 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 90px;
+    line-height: 5rem;
+    color: #16151bb4;
+    margin: 0;
+    padding: 0;
+}
+.avatar-bio h2 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 200;
+    text-transform: uppercase;
+}
+#skewed-name {
+    padding-left: 110px;
+}
+.avatar-bio p {
+    font-family: 'Poppins', sans-serif;
+    width: 65%;
+}
+.avatar-bio img {
+    width: 40%; 
+    height: 20%; 
+    object-fit: none;
+    margin: 0;
+    padding-left: 100px;
+}
+
+/* Button by Duolingo */
+.avatar-bio button {
+  appearance: button;
+  background-color: #1899D6;
+  border: solid transparent;
+  border-radius: 16px;
+  border-width: 0 0 4px;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  cursor: pointer;
+  display: inline-block;
+  font-family: 'Poppins', sans-serif;
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: .8px;
+  line-height: 20px;
+  margin: 0;
+  outline: none;
+  overflow: visible;
+  padding: 13px 16px;
+  text-align: center;
+  text-transform: uppercase;
+  touch-action: manipulation;
+  transform: translateZ(0);
+  transition: filter .2s;
+  user-select: none;
+  -webkit-user-select: none;
+  vertical-align: middle;
+  white-space: nowrap;
+  width: 20%;
+}
+
+.avatar-bio button:after {
+  background-clip: padding-box;
+  background-color: #1CB0F6;
+  border: solid transparent;
+  border-radius: 16px;
+  border-width: 0 0 4px;
+  bottom: -4px;
+  content: "";
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: -1;
+}
+
+.avatar-bio button:main,
+.avatar-bio button:focus {
+  user-select: auto;
+}
+
+.avatar-bio button:hover:not(:disabled) {
+  filter: brightness(1.1);
+  -webkit-filter: brightness(1.1);
+}
+
+.avatar-bio button:disabled {
+  cursor: auto;
+}
+
+/* Avatar styling */
+.avatar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
