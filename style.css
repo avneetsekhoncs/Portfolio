@@ -1,4 +1,4 @@
-
+/* NavBar Styling  */
 nav{
     width: 100%;
     position: fixed;
@@ -7,7 +7,6 @@ nav{
 
 nav a{
     font-family: 'Roboto Mono', monospace;
-    font: weight 400px;
     text-transform:uppercase;
     text-decoration:none;
     text-align: center;
@@ -36,4 +35,5 @@ nav svg {
     float: right;
     padding-right: 30px;
 }
+
 
