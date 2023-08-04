@@ -1,9 +1,11 @@
 /* Main content stlying */
 .grid-container {
-    height: 97vh;
+    min-height: 93vh;
+    min-width: auto;
     display: grid;
     grid-template-columns: 0fr 2fr 2fr;
-    grid-template-rows: 0fr 1fr;
+    grid-template-rows: 1fr;
+    gap: 3rem;
 }
 
 /* Navbar Styling  */
@@ -27,14 +29,45 @@ nav svg {
 }
 #brand-logo {
     float: left;
-    padding-left: 30px;
+    padding-left: 10px;
 }
 #nav-email {
-    padding-left: 20%;
+    padding-left: 23.5%;
 }
 .nav-right {
     float: right;
     padding-right: 30px;
+}
+
+nav .toggle_btn {
+    float: right;
+    display: none;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    color:#16151ba1;
+    right: 2rem;
+    top: 60px;
+    height: 0;
+    width: 300px;
+    background: rgba(134, 132, 132, 0.1);
+    backdrop-filter: blur(15px);
+    border-radius: 10px;
+    overflow: hidden;
+    transition: height 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.dropdown-menu.open {
+    height: 240px;
+}
+
+.dropdown-menu li {
+    padding: 0.7rem;
+    display: flex;
+    align-items: end;
+    justify-content: end;
 }
 
 /* sidebar styling */
@@ -59,7 +92,6 @@ nav svg {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding-left: 10rem;
 }
 .avatar-bio h1 {
     font-family: 'Poppins', sans-serif;
@@ -68,7 +100,7 @@ nav svg {
     line-height: 5rem;
     color: #16151bb4;
     margin: 0;
-    padding: 0;
+    padding-right: 70px;
 }
 .avatar-bio h2 {
     font-family: 'Poppins', sans-serif;
@@ -77,35 +109,35 @@ nav svg {
     padding-bottom: 1rem;
 }
 #skewed-name {
-    padding-left: 110px;
+    padding-left: 150px;
 }
 .avatar-bio p {
     font-family: 'Poppins', sans-serif;
-    width: 65%;
+    width: 80%;
     padding-bottom: 3rem;
 }
 .avatar-bio img {
-    width: 40%; 
-    height: 20%; 
-    object-fit: none;
+    width: 100px; 
+    height: auto; 
+    object-fit: contain;
     margin: 0;
     padding-left: 100px;
     padding-bottom: 2rem;
 }
 
-/* Button by Algolia */
 .avatar-bio button {
+    /* Button by Algolia */
     align-items: center;
     appearance: none;
-    background-color: #f8bf05;
+    background-color: #f75f5f;
     border-radius: 4px;
     border-width: 0;
-    box-shadow: rgba(45, 35, 66, 0.4) 0 2px 4px,rgba(45, 35, 66, 0.3) 0 7px 13px -3px,#f8bf05 0 -3px 0 inset;
+    box-shadow: rgba(45, 35, 66, 0.4) 0 2px 4px,rgba(45, 35, 66, 0.3) 0 7px 13px -3px,#f75f5f 0 -3px 0 inset;
     box-sizing: border-box;
-    color: #36395A;
+    color: #ffffff;
     cursor: pointer;
     display: inline-flex;
-    font-family: "JetBrains Mono",monospace;
+    font-family: 'Poppins', sans-serif;
     height: 48px;
     justify-content: center;
     line-height: 1;
@@ -148,7 +180,46 @@ nav svg {
 }
 
 .avatar img {
-    border: 5px solid rgba(0, 0, 0, 0.699);
+    border: 5px solid rgba(75, 74, 77, 0.808);
     border-radius: 50%;
-    box-shadow: 10px 10px 5px rgb(60, 61, 61);
+    box-shadow: 10px 10px 5px rgb(106, 107, 107);
+}
+
+
+/* Media Queries */
+@media (max-width: 1500px) {
+    .avatar {padding: 0;}
+}
+
+@media (max-width: 1400px) {
+    .avatar {padding: 0;}
+    .avatar img {
+        width: 450px;
+    }
+}
+
+@media (max-width: 1200px) {
+    .grid-container {grid-template-columns: 1fr;}
+    .avatar {padding: 0;}
+    .avatar img {display: none;}
+}
+
+@media (max-width: 992px) {
+    nav > a {display: none;}
+    nav .toggle_btn {display: block;}
+    .dropdown-menu {display: block;}
+    .sidebar a {display: none;}
+}
+
+@media (max-width: 768px) {
+    .grid-container {grid-template-columns: auto;}
+}
+
+@media (max-width: 576px) {
+    .dropdown-menu {
+        left: 2rem;
+        width: unset;
+    }
+    .avatar-bio h1 {padding: 0;}
+    #skewed-name {padding: 0;}
 }
