@@ -28,11 +28,10 @@ nav svg {
     top: 2px;
 }
 #brand-logo {
-    float: left;
     padding-left: 10px;
 }
 #nav-email {
-    padding-left: 23.5%;
+    margin-right: 23.5%;
 }
 .nav-right {
     float: right;
@@ -199,16 +198,21 @@ nav .toggle_btn {
 }
 
 @media (max-width: 1200px) {
-    .grid-container {grid-template-columns: 1fr;}
+    .grid-container {grid-template-columns: 0fr 1fr;}
     .avatar {padding: 0;}
     .avatar img {display: none;}
+    /* .sidebar a {display: none;} */
 }
 
 @media (max-width: 992px) {
     nav > a {display: none;}
     nav .toggle_btn {display: block;}
     .dropdown-menu {display: block;}
-    .sidebar a {display: none;}
+    .sidebar {
+        justify-content: left;
+        align-items: start;
+        flex-direction: row;
+    }
 }
 
 @media (max-width: 768px) {
