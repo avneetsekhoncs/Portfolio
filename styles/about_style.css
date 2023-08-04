@@ -1,6 +1,6 @@
 /* Main content stlying */
 .grid-container {
-    min-height: 93vh;
+    height: 93vh;
     min-width: auto;
     display: grid;
     grid-template-columns: 0fr 2fr 2fr;
@@ -50,7 +50,7 @@ nav .toggle_btn {
     top: 60px;
     height: 0;
     width: 300px;
-    background: rgba(134, 132, 132, 0.1);
+    background: rgba(41, 40, 40, 0.342);
     backdrop-filter: blur(15px);
     border-radius: 10px;
     overflow: hidden;
@@ -66,6 +66,9 @@ nav .toggle_btn {
     display: flex;
     align-items: end;
     justify-content: end;
+}
+.dropdown-menu li a {
+    color: white;
 }
 
 /* sidebar styling */
@@ -170,43 +173,41 @@ nav .toggle_btn {
 }
 
 /* Avatar styling */
-.avatar {
+.about-me {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    justify-content: start;
     align-items: center;
-    padding-right: 10rem;
+    overflow: auto;
+    margin-top: 100px;
 }
 
-.avatar img {
-    border: 5px solid rgba(75, 74, 77, 0.808);
-    border-radius: 50%;
-    box-shadow: 10px 10px 5px rgb(106, 107, 107);
+.about-me p {
+    font-family: 'Poppins', sans-serif;
+    /* text-align: center; */
+    width: 90%;
 }
 
 
 /* Media Queries */
 @media (max-width: 1500px) {
-    .avatar {padding: 0;}
+    
 }
 
 @media (max-width: 1400px) {
-    .avatar {padding: 0;}
-    .avatar img {
-        width: 450px;
-    }
+
 }
 
 @media (max-width: 1200px) {
-    .grid-container {grid-template-columns: 0fr 1fr;}
-    .avatar {padding: 0;}
-    .avatar img {display: none;}
-    /* .sidebar a {display: none;} */
-}
-
-@media (max-width: 992px) {
+    .grid-container {grid-template-columns: 1fr;}
     nav > a {display: none;}
     nav .toggle_btn {display: block;}
     .dropdown-menu {display: block;}
+    .avatar-bio p {text-align: center;}
+    .about-me {
+        overflow: unset;
+        margin-top: 0;
+    }
     .sidebar {
         justify-content: left;
         align-items: start;
@@ -214,15 +215,23 @@ nav .toggle_btn {
     }
 }
 
+@media (max-width: 992px) {
+    
+}
+
 @media (max-width: 768px) {
-    .grid-container {grid-template-columns: auto;}
+    .grid-container {
+        grid-template-columns: auto;
+    }
 }
 
 @media (max-width: 576px) {
+    .toggle_btn{margin: 0;}
     .dropdown-menu {
         left: 2rem;
         width: unset;
     }
+    .avatar-bio{margin-left: 30px;}
     .avatar-bio h1 {padding: 0;}
     #skewed-name {padding: 0;}
 }
