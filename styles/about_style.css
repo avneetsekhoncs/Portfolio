@@ -320,10 +320,15 @@ nav .toggle_btn {
     .nav-container{
         position: fixed;
         width: 98%;
+        top: 0%;
+        background-color: #ffffff;
     }
     nav > a {display: none;}
     nav .toggle_btn {display: block;}
-    nav #brand-logo {display: inline-block;}
+    nav #brand-logo {
+        top: 5px;
+        display: inline-block;
+    }
     .dropdown-menu {display: block;}
     .avatar-bio {
         margin-top: 60px;
