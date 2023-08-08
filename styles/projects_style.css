@@ -204,6 +204,16 @@ nav .toggle_btn {
     margin-bottom: 5px;
 }
 
+.info-cell h3 a {
+    text-decoration: none;
+    color: #000000;
+}
+
+.info-cell h3 svg {
+    width: 10px;
+    height: auto;
+}
+
 .info-cell h4 {
     margin-top: 0;
 }
@@ -232,6 +242,13 @@ nav .toggle_btn {
     color: #a5a3a3;
     width: 31%;
     margin-right: 30px;
+}
+
+.info-cell #work-time img {
+    height: auto;
+    width: 90px;
+    margin-top: 20px;
+    margin-left: 20px;
 }
 
 .info-cell #work-description {

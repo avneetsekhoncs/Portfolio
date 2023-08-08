@@ -232,6 +232,7 @@ nav .toggle_btn {
     color: #a5a3a3;
     width: 31%;
     margin-right: 30px;
+    text-transform: uppercase;
 }
 
 .info-cell #work-description {
