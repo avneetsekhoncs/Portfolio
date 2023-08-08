@@ -334,13 +334,12 @@ nav .toggle_btn {
 }
 
 @media (max-width: 992px) {
-
+    
 }
 
 @media (max-width: 768px) {
-    .grid-container {
-        grid-template-columns: auto;
-    }
+    .grid-container {grid-template-columns: auto;}
+    .avatar-bio {display: none;}
 }
 
 @media (max-width: 576px) {
