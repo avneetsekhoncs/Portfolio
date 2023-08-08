@@ -45,12 +45,12 @@ nav .toggle_btn {
 .dropdown-menu {
     display: none;
     position: absolute;
-    color:#16151ba1;
+    /* color:#16151b73; */
     right: 2rem;
     top: 60px;
     height: 0;
     width: 300px;
-    background: rgba(41, 40, 40, 0.342);
+    background: rgba(41, 40, 40, 0.719);
     backdrop-filter: blur(15px);
     border-radius: 10px;
     overflow: hidden;
@@ -211,6 +211,10 @@ nav .toggle_btn {
         margin-top: 60px;
     }
     .avatar-bio p {text-align: center;}
+    .nav-container{
+        position: fixed;
+        width: 98%;
+    }
     nav > a {display: none;}
     nav #brand-logo {display: inline-block;}
     nav .toggle_btn {display: block;}

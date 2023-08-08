@@ -54,7 +54,7 @@ nav .toggle_btn {
     top: 60px;
     height: 0;
     width: 300px;
-    background: rgba(41, 40, 40, 0.342);
+    background: rgba(41, 40, 40, 0.719);
     backdrop-filter: blur(15px);
     border-radius: 10px;
     overflow: hidden;
@@ -253,6 +253,10 @@ nav .toggle_btn {
     .grid-container {
         grid-template-columns: 1fr;
         grid-template-rows: 0fr 1fr;
+    }
+    .nav-container{
+        position: fixed;
+        width: 98%;
     }
     nav > a {display: none;}
     nav .toggle_btn {display: block;}

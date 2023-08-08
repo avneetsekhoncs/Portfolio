@@ -54,7 +54,7 @@ nav .toggle_btn {
     top: 60px;
     height: 0;
     width: 300px;
-    background: rgba(41, 40, 40, 0.342);
+    background: rgba(41, 40, 40, 0.719);
     backdrop-filter: blur(15px);
     border-radius: 10px;
     overflow: hidden;
@@ -217,8 +217,8 @@ nav .toggle_btn {
 .info-cell-damon .inner-damon {
     padding-left: 25px;
     padding-right: 25px;
-    text-align: justify;
-    text-justify: auto;
+    /* text-align: justify;
+    text-justify: auto; */
 }
 
 .info-cell-damon input[type="checkbox"]:checked + .hide-damon {
@@ -255,8 +255,8 @@ nav .toggle_btn {
 .info-cell-archive .inner-archive {
     padding-left: 25px;
     padding-right: 25px;
-    text-align: justify;
-    text-justify: auto;
+    /* text-align: justify;
+    text-justify: auto; */
 }
 
 .info-cell-archive input[type="checkbox"]:checked + .hide-archive {
@@ -293,8 +293,8 @@ nav .toggle_btn {
 .info-cell-td .inner-td {
     padding-left: 25px;
     padding-right: 25px;
-    text-align: justify;
-    text-justify: auto;
+    /* text-align: justify;
+    text-justify: auto; */
 }
 
 .info-cell-td input[type="checkbox"]:checked + .hide-td {
@@ -316,6 +316,10 @@ nav .toggle_btn {
     .grid-container {
         grid-template-columns: 1fr;
         grid-template-rows: 0fr 1fr;
+    }
+    .nav-container{
+        position: fixed;
+        width: 98%;
     }
     nav > a {display: none;}
     nav .toggle_btn {display: block;}
