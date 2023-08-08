@@ -54,8 +54,7 @@ nav .toggle_btn {
     top: 60px;
     height: 0;
     width: 300px;
-    background: rgba(41, 40, 40, 0.719);
-    backdrop-filter: blur(15px);
+    background: rgb(41, 40, 40);
     border-radius: 10px;
     overflow: hidden;
     transition: height 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
@@ -343,7 +342,9 @@ nav .toggle_btn {
 }
 
 @media (max-width: 992px) {
-    
+    nav .toggle_btn {
+        margin-right: 15px;
+    }
 }
 
 @media (max-width: 768px) {
