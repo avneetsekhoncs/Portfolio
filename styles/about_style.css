@@ -62,7 +62,7 @@ nav .toggle_btn {
 }
 
 .dropdown-menu.open {
-    height: 240px;
+    height: 285px;
 }
 
 .dropdown-menu li {
@@ -120,6 +120,8 @@ nav .toggle_btn {
     font-family: 'Poppins', sans-serif;
     width: 80%;
     padding-bottom: 3rem;
+    text-align: justify;
+    text-justify: auto;
 }
 .avatar-bio img {
     width: 100px; 
@@ -181,17 +183,125 @@ nav .toggle_btn {
     display: flex;
     flex-direction: column;
     justify-content: start;
-    align-items: center;
+    align-items: start;
     overflow: auto;
     margin-top: 100px;
-}
-
-.about-me p {
     font-family: 'Poppins', sans-serif;
-    /* text-align: center; */
-    width: 90%;
 }
 
+/* Damon Information Hide/Show */
+.info-cell-damon {
+    background-color: #f7cf5f;
+    border-radius: 4px;
+    border-width: 0;
+    display: flex;
+    flex-direction: column;
+    padding: 25px;
+    width: 80%;
+    margin-bottom: 25px;
+}
+
+.info-cell-damon label {
+    margin-top: 2px;
+    text-align: center;
+}
+.info-cell-damon .hide-damon {
+    width: 100%;
+    display: inline-block;
+    height: 0px;
+    overflow: hidden;
+    transition: all 0.5s ease;
+    opacity: 0;
+}
+
+.info-cell-damon .inner-damon {
+    padding-left: 25px;
+    padding-right: 25px;
+    text-align: justify;
+    text-justify: auto;
+}
+
+.info-cell-damon input[type="checkbox"]:checked + .hide-damon {
+    height: 150px;
+    opacity: 100;
+    display: table;
+}
+
+/* Archive Information Hide/Show */
+.info-cell-archive {
+    background-color: #63e1d0cc;
+    border-radius: 4px;
+    border-width: 0;
+    display: flex;
+    flex-direction: column;
+    padding: 25px;
+    width: 80%;
+    margin-bottom: 25px;
+}
+
+.info-cell-archive label {
+    margin-top: 2px;
+    text-align: center;
+}
+.info-cell-archive .hide-archive {
+    width: 100%;
+    display: inline-block;
+    height: 0;
+    overflow: hidden;
+    transition: all 0.5s ease;
+    opacity: 0;
+}
+
+.info-cell-archive .inner-archive {
+    padding-left: 25px;
+    padding-right: 25px;
+    text-align: justify;
+    text-justify: auto;
+}
+
+.info-cell-archive input[type="checkbox"]:checked + .hide-archive {
+    height: 150px;
+    opacity: 100;
+    display: table;
+}
+
+/* TD Information Hide/Show */
+.info-cell-td {
+    background-color: #008a00af;
+    border-radius: 4px;
+    border-width: 0;
+    display: flex;
+    flex-direction: column;
+    padding: 25px;
+    width: 80%;
+    margin-bottom: 25px;
+}
+
+.info-cell-td label {
+    margin-top: 2px;
+    text-align: center;
+}
+.info-cell-td .hide-td {
+    width: 100%;
+    display: inline-block;
+    height: 0;
+    overflow: hidden;
+    transition: all 0.5s ease;
+    opacity: 0;
+}
+
+.info-cell-td .inner-td {
+    padding-left: 25px;
+    padding-right: 25px;
+    text-align: justify;
+    text-justify: auto;
+}
+
+.info-cell-td input[type="checkbox"]:checked + .hide-td {
+    height: 150px;
+    opacity: 100;
+    display: table;
+}
 
 /* Media Queries */
 @media (max-width: 1500px) {
@@ -209,35 +319,27 @@ nav .toggle_btn {
     }
     nav > a {display: none;}
     nav .toggle_btn {display: block;}
+    nav #brand-logo {display: inline-block;}
     .dropdown-menu {display: block;}
+    .avatar-bio {
+        margin-top: 60px;
+    }
     .avatar-bio p {text-align: center;}
     .about-me {
         overflow: unset;
-        margin-top: 0;
+        margin-top: 70px;
+        align-items: center;
     }
-    .sidebar {
-        justify-content: left;
-        align-items: start;
-        flex-direction: row;
-    }
-    #center-logo{
-        margin-left: 43%;
-        display: block;
-    }
+    .sidebar {display: none;}
 }
 
 @media (max-width: 992px) {
-    #center-logo{
-        margin-left: 40%;
-    }
+
 }
 
 @media (max-width: 768px) {
     .grid-container {
         grid-template-columns: auto;
-    }
-    #center-logo{
-        margin-left: 37%;
     }
 }
 
@@ -250,7 +352,4 @@ nav .toggle_btn {
     .avatar-bio{margin-left: 30px;}
     .avatar-bio h1 {padding: 0;}
     #skewed-name {padding: 0;}
-    #center-logo{
-        margin-left: 30%;
-    }
 }

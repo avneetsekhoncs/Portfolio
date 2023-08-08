@@ -32,10 +32,6 @@ nav svg {
 #nav-email {
     margin-right: 23.5%;
 }
-#center-logo{
-    float: right;
-    display: none;
-}
 .nav-right {
     float: right;
     padding-right: 30px;
@@ -62,7 +58,7 @@ nav .toggle_btn {
 }
 
 .dropdown-menu.open {
-    height: 240px;
+    height: 285px;
 }
 
 .dropdown-menu li {
@@ -206,40 +202,31 @@ nav .toggle_btn {
 @media (max-width: 1200px) {
     .grid-container {
         grid-template-columns: 1fr;
-        grid-template-rows: 0fr 1fr;
+        grid-template-rows: 0fr;
     }
-    .avatar {padding: 0;}
-    .avatar img {display: none;}
+    .avatar {
+        display: none;
+    }
+    .avatar-bio {
+        margin-top: 60px;
+    }
     .avatar-bio p {text-align: center;}
     nav > a {display: none;}
-    nav .toggle_btn {
-        display: block;
-    }
+    nav #brand-logo {display: inline-block;}
+    nav .toggle_btn {display: block;}
     .dropdown-menu {display: block;}
-    .sidebar {
-        justify-content: left;
-        align-items: start;
-        flex-direction: row;
-    }
-    #center-logo{
-        margin-left: 43%;
-        display: block;
-    }
+    .sidebar {display: none;}
 }
 
 @media (max-width: 992px) {
-    #center-logo{
-        margin-left: 40%;
-    }
+
 }
 
 @media (max-width: 768px) {
     .grid-container {
         grid-template-columns: auto;
     }
-    #center-logo{
-        margin-left: 37%;
-    }
+
 }
 
 @media (max-width: 576px) {
@@ -251,7 +238,5 @@ nav .toggle_btn {
     .avatar-bio{margin-left: 30px;}
     .avatar-bio h1 {padding: 0;}
     #skewed-name {padding: 0;}
-    #center-logo{
-        margin-left: 30%;
-    }
+
 }
