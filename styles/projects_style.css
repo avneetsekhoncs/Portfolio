@@ -289,7 +289,7 @@ nav .toggle_btn {
     .avatar-bio p {text-align: center;}
     .about-me {
         overflow: unset;
-        margin-top: 70px;
+        margin-top: 10px;
         align-items: center;
     }
     .sidebar {display: none;}
